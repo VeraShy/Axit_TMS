@@ -286,3 +286,16 @@
     padding: 15px 0;
     border: 1px solid #F5F5F5;
 }
+.reviews-content {
+    display: flex;
+    margin: 0 -15px;
+}
+.reviews-content-item {
+    width: 33.3%;
+    padding: 0 15px;
+}
+.reviews-content-item__quote {
+    width: 100%;
+    background-color: grey;
+    padding: 20px 37px;
+}

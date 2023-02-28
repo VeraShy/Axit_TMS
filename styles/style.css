@@ -232,14 +232,18 @@
 }
 .pricing-content {
     display: flex;
-    justify-content: space-between;
-    margin-top: 59px;
+    margin: 59px -15px 0 -15px;
+}
+.pricing-content a {
+    width: 33.3%;
+    padding: 0 15px;    
 }
 .pricing-content-item {
-    width: 370px;  
     height: max-content;
     text-align: center; 
     padding-top: 20px;
+    transition: 0.3s;
+    cursor: pointer;
 }
 .pricing-content-item:hover {
     padding-top: 0px;
@@ -286,9 +290,13 @@
     padding: 15px 0;
     border: 1px solid #F5F5F5;
 }
+.reviews {
+    padding: 45px 0 64px 0;
+}
 .reviews-content {
     display: flex;
     margin: 0 -15px;
+    padding: 43px 0 0 0;
 }
 .reviews-content-item {
     width: 33.3%;
@@ -296,6 +304,49 @@
 }
 .reviews-content-item__quote {
     width: 100%;
-    background-color: grey;
-    padding: 20px 37px;
+    background-color: #E2E2E2;
+    border: none;
+    border-radius: 10px 10px;
+    font-family: 'Raleway';
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 21.13px; 
+    color: #86878B;
+    text-align: center;
+    padding: 37px 20px;
+}
+.reviews-content-item__author {
+    display: flex;
+    padding-top: 66px;
+}
+.reviews-content-item__author-img {
+    width: 70px;
+    height: 70px;
+    overflow: hidden;
+    border: none;
+    border-radius: 50%;
+    margin-right: 30px;
+    flex-shrink: 0;
+}
+.reviews-content-item__author-img img {
+    width: inherit;
+    height: inherit;  
+}
+.reviews-content-item__author-about {
+    padding-top: 15px;
+}
+.reviews-content-item__author-about-name {
+    font-family: 'Open Sans';
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 32.68px; 
+    color: #000000;
+    padding-bottom: 20px;
+}
+.reviews-content-item__author-about-prof {
+    font-family: 'Raleway';
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 21.13px; 
+    color: #000000;
 }

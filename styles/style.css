@@ -170,23 +170,29 @@
 .main-form__form {
     display: flex;
     flex-direction: column;
-    padding: 0 50px;
 }
 .main-form__form-input {
-    border: none;
-    border-bottom: 1px solid #BDBDBD;
-    padding: 33px 0 19px 0;
+    padding: 0 50px;
 }
-.main-form__form-input::placeholder {
+.main-form__form-input input{
+    width: 100%;
+    border: none;
     font-family: 'Open Sans';
     font-weight: 400;
-    font-size: 14px;
+    font-size: 16px;
     line-height: 19px;
-    color:#BDBDBD; 
+    border-bottom: 1px solid #BDBDBD;
+    padding: 33px 0 19px 5px;
+    transition: 0.1s;
 }
-/* .main-form__form-input:focus {
-    border: none;
-} */
+.main-form__form-input input::placeholder {
+    color:#BDBDBD; 
+    font-size: 14px;
+}
+.main-form__form-input input:focus {
+    outline: none;
+    border-bottom: 2px solid #EC7979;
+} 
 .main-form__form-btn {
     width: 100%;
     height: 60px;
@@ -199,6 +205,14 @@
     background-color: #EC7979;
     border: none;
     margin-top: 90px;
+    transition: 0.3s;
+}
+.main-form__form-btn:hover {
+    background-color: #AB4949;
+}
+.main-form__form-btn:active {
+    background-color: #EC7979;
+    box-shadow: inset 0px 0px 10px 1px grey;   
 }
 .media {
     width: 100%;
@@ -238,6 +252,9 @@
     justify-content: space-between; 
     align-items: center;
     padding: 0 20px 0 60px;
+}
+.media-socials-list__item a svg path {
+    transition: 0.3s;
 }
 .media-socials-list__item:hover path{
     fill: #a2a2a2;
@@ -284,7 +301,6 @@
 }
 .tab-content-text__head {
     font-family: 'Open Sans';
-    font-style: bold;
     font-weight: 700;
     font-size: 30px;
     line-height: 41px;
@@ -295,7 +311,6 @@
 
 .tab-content-text__desc p {
     font-family: 'Raleway';
-    font-style: normal;
     font-weight: 400;
     font-size: 18px;
     line-height: 21px;
@@ -343,7 +358,6 @@
     width: 100%;
     position: relative;
     font-family: 'Raleway';
-    font-style: normal;
     font-weight: 400;
     font-size: 36px;
     line-height: 42px;
@@ -362,7 +376,6 @@
 }
 .section-head__text {
     font-family: 'Raleway';
-    font-style: normal;
     font-weight: 400;
     font-size: 18px;
     line-height: 21px;
@@ -410,7 +423,6 @@
 .awesome-content-item__text-head {
     height: 100px; 
     font-family: 'Open Sans';
-    font-style: normal;
     font-weight: 700;
     font-size: 24px;
     line-height: 33px; 
@@ -421,7 +433,6 @@
 }
 .awesome-content-item__text-desc {
     font-family: 'Raleway';
-    font-style: normal;
     font-weight: 400;
     font-size: 18px;
     line-height: 21px;
@@ -610,40 +621,71 @@
 .contact-form {
     display: flex;
     flex-wrap: wrap;
-    gap: 30px;
-    padding-top: 39px;
+    column-gap: 30px;
+    padding-top: 30px;
 }
 .contact-form__col {
     width: 48%;
+    height: 300px;
+    /* без определенной высоты не становился на место textarea */
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: flex-end;
 }
 .contact-form__col-input {
+    width: 100%;
     height: 33%;
+}
+.contact-form__col-input input {
+    width: 100%;
+    height: 100%;
+    font-family: 'Open Sans';
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
     border: none;
     border-bottom: 1px solid #BDBDBD;
     padding: 50px 0 16px 0;
+    transition: 0.1s;
 }
-.contact-form__col-input::placeholder {
-    font-family: 'Open Sans';
-    font-weight: 400;
+.contact-form__col-input input::placeholder {
     font-size: 14px;
-    line-height: 19px;
     color:#BDBDBD; 
 }
-.contact-form__col-input_large {
+.contact-form__col-input input:focus,
+.contact-form__col-textarea textarea:focus  {
+    outline: none;
+    border-bottom: 2px solid #EC7979;
+}
+.contact-form__col-textarea {
+    width: 100%;
+    height: 100%;
+}
+.contact-form__col-textarea textarea {
+    width: 100%;
     height: 100%; 
+    font-family: 'Open Sans';
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    border: none;
+    border-bottom: 1px solid #BDBDBD;
+    resize: none; 
+    transition: 0.1s; 
+    padding: 57px 0 16px 0;
+} 
+.contact-form__col-textarea textarea::placeholder {
+    font-size: 14px;
+    color:#BDBDBD; 
 }
-.contact-form__col-input_large::placeholder {
 
-}
 .contact-form__btn {
     width: 100%;
     text-align: center;
 }
 .btn-red_large {
     width: 370px;
+    margin: 50px 0 0 0;
 }
 .footer {
     background-color: #000000;
@@ -654,6 +696,9 @@
     gap: 44px;
     font-size: 40px;
     padding: 40px 0 32px 0;
+}
+.footer-socials-list__item a{
+    transition: 0.3s;
 }
 .footer-socials-list a {
     color:#CCCCCC;

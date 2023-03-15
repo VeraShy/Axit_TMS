@@ -12,7 +12,9 @@
     <header class="header">
         <div class="wrapper header-wrapper">
             <div class="header-logo">
-                <img src="assets/header-logo.png" alt="logo">
+                <a href="#">
+                    <img src="assets/header-logo.png" alt="logo">
+                </a>
             </div>
             <nav>
                 <ul class="header-nav">
@@ -47,13 +49,20 @@
                 <p class="main-form__name">
                     Try Your <span>FREE</span> Trial Today
                 </p>
-                <form>
-                    <div class="main-form__form">
-                        <input class="main-form__form-input" name="#" placeholder="Name">
-                        <input class="main-form__form-input" name="#" placeholder="Email">
-                        <input class="main-form__form-input" name="#" placeholder="Password">
+                <form class="main-form__form" action="#">
+                    <div class="main-form__form-input">
+                        <label for="userName"></label>
+                        <input type="text" name="userName" placeholder="Name" id="userName">
                     </div>
-                    <button class="main-form__form-btn">Get Started</button>
+                    <div class="main-form__form-input">
+                        <label for="userEmail"></label>
+                        <input type="email" name="userEmail" placeholder="Email" id="userEmail">
+                    </div>   
+                    <div class="main-form__form-input">
+                        <label for="userPass"></label>
+                        <input type="password" name="userPass" placeholder="Password" id="userPass">
+                    </div>          
+                    <button type="submit" class="main-form__form-btn">Get Started</button>
                 </form>
             </div>
         </div>
@@ -397,12 +406,24 @@
             </div>
             <form class="contact-form">
                 <div class="contact-form__col">
-                    <input class="contact-form__col-input" type="text" placeholder="Name">
-                    <input class="contact-form__col-input" type="email" placeholder="Email">
-                    <input class="contact-form__col-input" type="password" placeholder="Password">
+                    <div class="contact-form__col-input">
+                        <label for="userNameCont"></label>
+                        <input type="text" name="userNameCont" placeholder="Name" id="userNameCont">
+                    </div>
+                    <div class="contact-form__col-input">
+                        <label for="userEmailCont"></label>
+                        <input type="email" name="userEmailCont" placeholder="Email" id="userEmailCont">
+                    </div>   
+                    <div class="contact-form__col-input">
+                        <label for="userPassCont"></label>
+                        <input type="password" name="userPassCont" placeholder="Password" id="userPassCont">
+                    </div>   
                 </div>
                 <div class="contact-form__col">
-                    <input class="contact-form__col-input contact-form__col-input_large" type="text" placeholder="Message">
+                    <div class="contact-form__col-textarea">
+                        <label for="userMessageCont"></label>
+                        <textarea id="userMessageCont" placeholder="Message"></textarea>
+                    </div>
                 </div>
                 <div class="contact-form__btn">
                     <div class="btn-red btn-red_large">
@@ -418,25 +439,25 @@
         <div class="wrapper">
             <div class="footer-socials">
                 <ul class="footer-socials-list">
-                    <li>
+                    <li class="footer-socials-list__item">
                         <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
                     </li>
-                    <li>
+                    <li class="footer-socials-list__item">
                         <a href="#"><i class="fa-brands fa-twitter"></i></a>
                     </li>
-                    <li>
+                    <li class="footer-socials-list__item">
                         <a href="#"><i class="fa-brands fa-linkedin"></i></a>                     
                     </li>
-                    <li>
+                    <li class="footer-socials-list__item">
                         <a href="#"><i class="fa-brands fa-pinterest"></i></a>
                     </li>
-                    <li>
+                    <li class="footer-socials-list__item">
                         <a href="#"><i class="fa-brands fa-instagram"></i></a>
                     </li>           
-                    <li>
+                    <li class="footer-socials-list__item">
                         <a href="#"><i class="fa-brands fa-github"></i></a>   
                     </li>
-                    <li>
+                    <li class="footer-socials-list__item">
                         <a href="#"><i class="fa-sharp fa-solid fa-rss"></i></a>   
                     </li>
                 </ul>   

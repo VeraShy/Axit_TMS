@@ -1,0 +1,185 @@
+.tab {
+    width: 100%;
+    &-wrapper {
+        padding-top: 100px;
+        padding-bottom: 50px;
+    }
+    &-nav {
+        &__btn {
+            width: 184px;
+            display: inline-block;
+            background-color: transparent;
+            font-family: 'Open Sans';
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 19px;
+            text-align: center;
+            border:none;
+            padding: 13px 0;
+            margin: 0;
+            margin-bottom: -1px;  
+            &_active {
+                width: 203px;
+                border: 1px solid #C6CBCD;
+                border-radius: 5px 5px 0 0;
+                border-bottom: none;
+                text-align: center;
+                padding: 13px 0; 
+                background-color: white;
+            }
+        }
+    }
+    &-content {
+        width: 100%;
+        height: max-content;
+        display: flex;
+        justify-content: space-between;
+        border: 1px solid #C6CBCD; 
+        background: white;
+        font-size: 0;
+        &-desc {
+            width: calc(100% - 470px);
+            font-size: 0;
+            margin: 0;
+            padding: 42px 30px 17px 100px;
+            &__title {
+                font-family: 'Open Sans';
+                font-weight: 700;
+                font-size: 30px;
+                line-height: 41px;
+                color: #000000;
+                padding-bottom: 69px;
+            }
+            &__text p {
+                font-family: 'Raleway';
+                font-weight: 400;
+                font-size: 18px;
+                line-height: 21px;
+                color: #000000;
+            }
+        }
+        &-img {
+            width: 470px;
+            height: 500px; 
+            overflow: hidden;
+            margin: 0;
+            & img {
+                width: auto;
+                height: 100%; 
+            }
+        }
+    }
+}
+
+@media (max-width: 1200px) {
+    .tab {
+        &-content {
+            &-desc {
+                padding: 42px 30px 17px 85px;
+                &__title {
+                    padding-bottom: 40px;
+                }
+                &__text p:first-child br {
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 1024px) {
+    .tab {
+        &-wrapper {
+            padding-top: 50px;
+            padding-bottom: 50px;
+        }
+        &-nav {
+            &__btn {
+                width: 156px;
+                &_active {
+                    width: 172px;
+                }
+            }
+        }
+        &-content {
+            &-desc {
+                padding: 24px 26px 10px 85px;
+                width: calc(100% - 398px);
+                &__title {
+                    font-size: 24px;
+                    line-height: 33px;
+                    padding-bottom: 66px;
+                }
+                &__text p {
+                    font-size: 14px;
+                    line-height: 16px;
+                }
+            }
+            &-img {
+                width: 398px;
+                height: 385px;
+            }
+        }
+    }
+}
+
+@media (max-width: 955px) {
+    .tab {
+        &-content {
+            &-desc {
+                padding-left: 35px;
+                &__title {
+                    padding-bottom: 20px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .tab {
+        &-wrapper {
+            padding-bottom: 25px;
+        }
+        &-content {
+            &-img {
+                display: none;
+            }
+            &-desc {
+                width: 100%;
+                text-align: center;
+                padding: 31px 20px 30px 24px;
+                &__title {
+                    padding-bottom: 35px; 
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 550px) {
+    .tab {
+        &-wrapper {
+            padding: 41px 16px 0 16px
+        }
+        &-nav {
+            &__btn {
+                width: 93px;
+                padding: 11px 0;
+            }
+        }
+        &-content {
+            &-desc {
+                &__title {
+                    font-size: 18px;
+                    line-height: 25px;
+                    padding-bottom: 45px;
+                }
+                &__text p {
+                    font-size: 13px;
+                    line-height: 15px;
+                }
+            }
+        }
+    }
+}
